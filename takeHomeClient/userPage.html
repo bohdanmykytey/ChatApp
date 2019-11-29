@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="userPage.css" />
+  </head>
+  <body>
+    <div class="card">
+      <img
+        src="https://integratedmgmt.com/wp-content/uploads/2015/02/blank-avatar-headshot-400x600.jpg"
+        alt="John"
+        style="width:100%"
+      />
+      <h1>Default User</h1>
+      <p class="title">CEO & Founder, Example</p>
+      <p>Harvard University</p>
+      <a href="#"><i class="fa fa-dribbble"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-facebook"></i></a>
+    </div>
+
+    <button class="open-button" onclick="openForm()">Chat</button>
+    
+    <div class="chat-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <h1>Chat</h1>
+
+        <label for="msg"><b>Message</b></label>
+        <textarea placeholder="Type message.." name="msg" required></textarea>
+
+        <button type="submit" class="btn">Send</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">
+          Close
+        </button>
+      </form>
+    </div>
+
+    <script>
+      let openForm = () => {
+        document.getElementById("myForm").style.display = "block";
+      }
+
+      let closeForm = () => {
+        document.getElementById("myForm").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
